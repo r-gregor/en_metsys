@@ -1,0 +1,27 @@
+==============================================================================================================
+ 2712  2020-11-12 11:48:09 \ls -A | grep -E "\..*" | grep -v .cache | xargs -I{} cp -rv {} en_metsys_git_setup/en_metsys_source/en_dotfiles/
+ 2713  2020-11-12 11:48:36 cd en_metsys_git_setup/en_metsys_source/en_dotfiles/
+ 2746  2020-11-12 11:51:33 cd en_metsys_git_setup/en_metsys_source/en_forallusers/
+ 2747  2020-11-12 11:51:47 cp -r /home/forallusers/* .
+ 2751  2020-11-12 11:52:31 rm en_metsys_git_setup/en_metsys_source/en_forallusers/ETC
+ 2752  2020-11-12 11:52:34 tree en_metsys_git_setup/
+ 2753  2020-11-12 11:53:05 cd en_metsys_git_setup/en_metsys_source/en_dotfiles/
+ 2756  2020-11-12 11:53:19 cd en_metsys_git_setup/
+==============================================================================================================
+ 2758  2020-11-12 11:53:32 git init --bare en_metsys
+ 2794  2020-11-12 12:03:41 echo "alias ndot='/usr/bin/git --git-dir=$HOME/en_metsys_git_setup/en_metsys --work-tree=$HOME/en_metsys_git_setup/en_metsys_source'" >> /home/forallusers/aliases_forall
+ 2807  2020-11-12 12:07:16 endot config --local status.showUntrackedFiles no
+ 2809  2020-11-12 12:08:54 ndot config --local status.showUntrackedFiles no
+ 2810  2020-11-12 12:09:06 ndot add en_dotfiles en_forallusers en_setups
+ 2811  2020-11-12 12:10:15 ndot commit -m "First commit 20201112"
+ 2812  2020-11-12 12:10:37 ndot remote add origin https://github.com/r-gregor/en_metsys
+ 2813  2020-11-12 12:10:47 ndot push -u origin master
+ 2818  2020-11-12 12:16:02 rm -r dotfiles_en/
+ 2819  2020-11-12 12:16:12 yes | rm -r dotfiles_en/
+ 2822  2020-11-12 12:16:34 rm -r forallusers_en/
+ 2823  2020-11-12 12:16:48 yes | rm -r forallusers_en/
+ 2857  2020-11-12 12:20:33 ndot add dotfiles-first-push-to-new-dotfiles_en-repo_20201110.txt git-commands_20201112.txt 
+ 2858  2020-11-12 12:21:08 ndot commit -m "commands sequence 20201112"
+ 2860  2020-11-12 12:21:17 ndot push
+ 2863  2020-11-12 12:22:50 ndot status -u
+==============================================================================================================
