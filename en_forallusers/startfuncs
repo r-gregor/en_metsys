@@ -1,0 +1,200 @@
+
+### GLOBAL VARIABLES ------------------------------------------------------------------
+gr_verzija=" [ verzija-en	20171127 | 20180104] "
+gr_novapot="/c/users/gregor.redelonghi/r.gregor.en/orodjarna/ukazi/podukazi"
+gr_OFPOT="/c/Program Files (x86)/Microsoft Office/Office14"
+gr_GGL="/c/Users/gregor.redelonghi/AppData/Local/Google/Chrome/Application/chrome.exe"
+gr_IE="/c/Program Files/Internet Explorer/iexplore.exe"
+gr_FF="/c/Users/gregor.redelonghi/myprogs/FireFox_63.0.1/FirefoxPortable.exe"
+### -----------------------------------------------------------------------------------
+
+# functions definitions ---------------------------------------------------------------
+function xcl() {
+# --> xcl	start excel.exe
+    cygstart "${gr_OFPOT}/EXCEL.EXE"
+}
+
+function wrd() {
+# --> wrd	start word.exe
+    cygstart "${gr_OFPOT}/WINWORD.EXE"
+}
+
+function ppt() {
+# --> ppt	start powerpoint.exe
+    cygstart "${gr_OFPOT}/POWERPNT.EXE"
+}
+
+# cygstart "${gr_OFPOT}/OUTLOOK.EXE"
+
+function acr() {
+# --> acr	start AcrobatReader
+ cygstart /c/Program\ Files\ \(x86\)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe
+}
+
+function clc {
+# --> clc	start calc.exe
+    # ${gr_novapot}/clc.bat
+    cygstart /c/Windows/System32/calc.exe
+}
+
+function a17() {
+# --> a17	start AutoCAD 2017
+    cygstart "/c/Program Files/Autodesk/AutoCAD 2017/acad.exe"
+}
+
+function a20() {
+# --> a120	start AutoCAD 2020
+    cygstart "/c/Program Files/Autodesk/AutoCAD 2020/acad.exe"
+}
+
+function vscode() {
+# --> vscode	start vscode
+    cygstart "/c/Users/gregor.redelonghi/myprogs/VSCode-win32-x64-1.40.0/Code.exe"
+}
+
+
+function ntp() {
+# --> ntp	start notepad.exe
+ cygstart /c/Windows/System32/\notepad.exe
+}
+
+
+function npp() {
+# --> npp	start notepad++.exe
+    # cygstart /c/Users/gregor.redelonghi/myprogs/Notepad++/notepad++.exe 
+    source ~/bin/00_ukazi/np.sh
+}
+
+function w19() {
+# --> w18	start explorer /c/Users/gregor.redelonghi/2019
+    cygstart explorer /E,"c:\Users\gregor.redelonghi\2019"
+}
+
+function wh() {
+# --> wh [YR]	start explorer /h/20$YR -- YR = 12, 13, 14, 15, 16, 17, 18, 19
+    msg="Usage	wh [YR] -- YR = 12, 13, 14, 15, 16, 17, 18, 19"
+
+    if [ $# -ne 1 ]; then
+        echo $msg
+
+    elif [ $1 -lt 12 -o $1 -gt 19 ]; then
+        echo $msg
+    else
+        cygstart explorer /E,"H:\20${1}"
+    fi
+}
+
+function mcm() {
+# --> mcm	start multicommander.exe
+    cygstart /c/Users/gregor.redelonghi/myprogs/MultiCommander_X64/MultiCommander.exe
+}
+
+function ie() {
+# --> ie	start IE
+ cygstart "$gr_IE"
+}
+
+
+function r_ed() {
+# --> r_ed	start ris: elektronska dovolilnica
+    gr_GO1="http://ris-jhl01.jhl.si/prodms/dbris/ris4i_main_4612?p_kateri=ris_elektronska_dovolilnica"
+    cygstart "$gr_IE" ${gr_GO1}
+}
+
+function r_ue() {
+# --> r_ue	start ris: uporabniški vmesnik
+ cygstart "$gr_IE" http://ris.jhl.si
+}
+
+function r_po() {
+# --> r_po	start ris: planiranje odsotnosti
+    gr_GO2="http://ris-jhl01.jhl.si/prodms/dbris/RIS4I_MAIN_4612?p_kateri=ris4i_dopusti"
+    cygstart "$gr_IE" ${gr_GO2}
+}
+
+
+function nl() {
+# --> nl	start nukleus (IE - luz)
+    cygstart "$gr_IE" http://gisportal.luz.si/Nukleus
+}
+
+function ne() {
+# --> ne	start nukleus (gc - EN)
+    # cygstart $gr_GGL "http://jpe-nukleus.jhl.si/PassAuth/AutoAuth.aspx?ReturnUrl=/nukleus/profile.aspx?id=Energetika@Ljubljana"
+    cygstart $gr_FF "http://jpe-nukleus.jhl.si/PassAuth/AutoAuth.aspx?ReturnUrl=/nukleus/profile.aspx?id=Energetika@Ljubljana"
+}
+
+function gg() {
+# --> gc	start google chrome
+    # cygstart /c/Users/gregor.redelonghi/AppData/Local/Google/Chrome/Application/chrome.exe
+	cygstart $gr_GGL
+}
+
+function f_rdr() {
+# --> f_rdr	start Abby FineReader
+    cygstart /c/Program\ Files\ \(x86\)/ABBYY\ FineReader\ 8.0\ Professional\ Edition/FineReader.exe
+}
+
+function psp() {
+# --> psp	start PaintShopPro
+    cygstart /c/Program\ Files\ \(x86\)/Jasc\ Software\ Inc/Paint\ Shop\ Pro\ 7/Psp.exe
+}
+
+function my() {
+# --> my	start mintty (new window)
+    cygstart /c/users/gregor.redelonghi/myprogs/cygwin64/bin/mintty.exe -p 280,50 -s 210,60 -
+}
+
+function db() {
+# --> db	start dropbox
+    cygstart /c/Users/gregor.redelonghi/AppData/Roaming/Dropbox/bin/Dropbox.exe
+}
+
+function db1() {
+# --> db	start dropbox
+    cygstart /c/Users/gregor.redelonghi/AppData/Roaming/Dropbox/bin/Dropbox.exe
+}
+
+
+
+function tgd() {
+# --> tgd	start t_gremdomov
+    t_gremdomov
+}
+
+function vgd() {
+# --> vgd	start v_gremdomov
+    v_gremdomov
+}
+
+function fncs() {
+    # print descriptions ...
+    gr_fjl="/home/forallusers/startfuncs"
+    grep "# --> " ${gr_fjl} | sed 's/# --> //' | sed '$ d'
+}
+
+function fnc() {
+    fncs
+}
+
+# start quickstart and tmux [20190326]
+function qtm() {
+    qckstrt
+    tmxs    
+}
+
+function cr() {
+# --> cr	start Cmder.exe
+    cygstart /c/users/gregor.redelonghi/myprogs/cmder/Cmder.exe
+}
+
+function cdpg_to_utf8() {
+    # set system codepage from 852 (latin II) to 65001 (utf-8)
+    cmd /c chcp 65001 &> /dev/null
+}
+
+
+function cdpg_to_latin2() {
+    # set system codepage 65001 (utf-8) to 852 (latin II)
+    cmd /c chcp 852 &> /dev/null
+}

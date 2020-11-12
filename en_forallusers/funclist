@@ -1,0 +1,250 @@
+### Functions ###
+gr_FF="/c/Users/gregor.redelonghi/myprogs/FireFox_63.0.1/FirefoxPortable.exe"
+
+# fukcija, pajpne ukaz na "less -I"
+
+so () {
+eval "$@" | less -I~
+}
+
+# --------------------------------------------------------
+
+cv () {
+# cdargs "$1" && cd "'cat "$HOME/.cdargs"'" ;
+cdargs "$1" && cd "$(cat "$HOME/.cdargsresult")" ;
+} 
+
+# --------------------------------------------------------
+
+# funkcija, ki pred ukazom sprazni (clear) ekran
+
+kl () {
+clear && eval "$@"
+}
+
+# --------------------------------------------------------
+
+# history list
+
+hf () {
+clear
+if [ $# != 1 ]; then
+    echo 'Number of argumets to function "hf" must be exactly 1 [one]!'
+else
+    history | grep "$1"
+fi
+}
+
+# --------------------------------------------------------
+
+lsl ()  {
+    for file in *
+    do
+        if [ -h $file ]; then
+                # echo $file
+                ls -got $file
+        fi
+    done
+}
+
+# --------------------------------------------------------
+
+aln () {
+clear
+eval "$@"
+echo -e "\n"
+}
+
+# --------------------------------------------------------
+# staro - CEZ CEL EKRAN!!
+# function crtice () {
+#   printf "%$(tput cols)s\n" | tr " "  "-"
+#   }
+# NOVO - 87 ZNAKOV
+function crtice () {
+    _ST_ZNAKOV=85
+    printf "%${_ST_ZNAKOV}s\n" | tr " " "-" # draw a line of "-" number-of-chars times ...
+    }
+
+# --------------------------------------------------------
+function cdh () {
+
+# check if there is one and only on argument:
+if [ $# -ne 1 ]; then
+    clear
+    echo "Usage $0 [path relative to \$HOME]"
+else
+
+    GR_RELPTH="$1"
+    # read -p "Relative path to \$HOME: ${GR_RELPTH}. Continue?"
+    cd $HOME/${GR_RELPTH}
+fi
+
+}
+
+# ---------------------------------------------------------
+# added 20160422
+upup(){ DEEP=$1; [ -z "${DEEP}" ] && { DEEP=1; }; for i in $(seq 1 ${DEEP}); do cd ../; done; }
+
+
+# ---------------------------------------------------
+# added 20160526
+# start new mintty window with screen and lyt-{1,2,3}
+
+function skrn() {
+
+gr_FJL="~/.screen-lyt"
+if [ $1 -eq 0 ] || [ $1 -eq 1 ] || [ $1 -eq 2 ] || [ $1 -eq 3 ]; then
+    gr_PRM=$1
+    mintty -e screen -c ${gr_FJL}-${gr_PRM} & 2>/dev/null
+else
+    gr_PRM="0"
+    mintty -e screen -c ${gr_FJL}-${gr_PRM} & 2>/dev/null
+fi
+
+# mintty -e screen -c ${gr_FJL}-${gr_PRM} & 2>/dev/null
+
+}
+
+# -------------------------------------------------------
+# added 20160617
+
+function danes_shrani() {
+
+gr_DNS_H='/h/2016-danes'
+
+    if [ ${gr_DNS_H} ]; then
+        rsync -avn --delete /c/Users/gregor.redelonghi/2016/ ${gr_DNS_H}/
+        echo -e "\nrsync -avn --delete /c/Users/gregor.redelonghi/2016/ ${gr_DNS_H}/\n"
+    else
+        echo "There is no ${gr_DNS_H}. Exiting ..."
+        # exit 1
+    fi
+}
+
+# --------------------------------------------------------
+# added 20160621
+# mplayer function that accepts unix path and converts it into windows path
+# mplayer must be softlinked to cygwin executable path!!
+#
+
+function mplyr() {
+
+    # check if there is one and only on argument:
+    if [ $# -ne 1 ]; then
+        clear
+        echo "Usage mplyr \"[full unix path to video/audio file]\""
+    else
+
+    gr_PTH="$1"
+    gr_WPTH=$(cygpath -w "${gr_PTH}")
+    echo "command: mplayer \"${gr_WPTH}\""
+    read -p "OK? (clock any ky to proceed, or ctrl-c to quit)."
+    mplayer "${gr_WPTH}"
+    fi
+# exit
+}
+
+
+# --------------------------------------------------------
+# # added 20170804 - function that combines ydd and RSYNC-en
+#
+function ydd() {
+    yes | ddbak && yes | ddlog
+}
+
+function yddr() {
+    yes | ddbak && yes | ddlog && RSYNC-BACKUP-en
+}
+
+function pddr() {
+    pddbak && pddlog && RSYNC-BACKUP-en
+}
+
+function pdd() {
+    pddbak && pddlog
+}
+
+
+function sbr() {
+    clear && source ~/.bashrc
+}
+
+function sbc() {
+    clear && source ~/.black_white_bashrc
+}
+
+### --------------------------------------------------------------------
+### 20180228
+
+function tmxs1 () {
+    # tmux -f ~/.mytmuxconf attach
+    tmux -f ~/.tmux_1_conf attach
+}
+
+
+function tmxs () {
+    # tmux -f ~/.mytmuxconf attach
+    tmux -f ~/.tmux_5_conf attach
+}
+
+
+function phome () {
+    cd $PHOME
+}
+
+# 20141027 IFS value settings
+# set IFS to newline '\n'
+nifs()	{
+	echo -n "setting IFS to newline ..." 
+	IFS=$'\n'
+	echo " done."
+}
+
+# set IFS to orginal ' \t\n'
+oifs()
+	{
+	echo -n "setting IFS to original value ..."
+	IFS=$' \t\n'
+	echo " done."
+	}
+
+
+function gcs ()
+{
+	gr_PTH=file://$(cygpath -w $PWD | sed 's:\\:/:g')
+	gr_FJL=$1
+    cygstart /c/Users/gregor.redelonghi/AppData/Local/Google/Chrome/Application/chrome.exe ${gr_PTH}/${gr_FJL}
+}
+
+
+function ffs ()
+{
+	gr_PTH=file://$(cygpath -w $PWD | sed 's:\\:/:g')
+	gr_FJL=$1
+    cygstart ${gr_FF} ${gr_PTH}/${gr_FJL}
+}
+
+function turl () {
+	if [ -z "$URL" ]; then
+		echo "URL is empty"
+	else
+		echo "URL=$URL"
+	fi
+}
+
+
+# 20201012
+# neofetch start
+function nf () {
+	clear
+	neofetch
+}
+
+
+# screenfetch
+function sf () {
+	clear
+	screenfetch-dev
+}
+

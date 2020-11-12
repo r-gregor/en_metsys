@@ -1,0 +1,55 @@
+# VARIABLES
+
+cbr=/c/_brisi
+grh=$HOME
+grb=$HOME/bin
+grd=$HOME/docs
+fau=/home/forallusers
+rgr=/c/rgregor-en2
+rbc=/c/rgregor-en2/cigwin-17x_bckp
+ulb=/usr/local/bin
+
+echo "cbr=/c/_brisi"
+echo "grh=$HOME"
+echo "grb=$HOME/bin"
+echo "grd=$HOME/docs"
+echo "fau=/home/forallusers"
+echo "rgr=/c/rgregor-en2"
+echo "rbc=/c/rgregor-en2/cigwin-17x_bckp"
+echo "ulb=/usr/local/bin"
+echo "bcs=cat /home/gredelonghi/docs/bash-shortcuts.chtsht"
+
+# --------------------------------------------------------
+
+# ALIASES:
+
+alias go='source /home/gredelonghi/bin/gooo.sh'
+
+# unalias ls
+alias lss='ls -hF --color=always --group-directories-first'
+alias l1='ls -1F --group-directories-first'
+alias ll='lss -lF'
+alias la='ll -A'
+alias lo='ls -got'
+alias lld='ll -d */'
+alias lsd='ls -d */'
+alias cl='clear'
+alias cp='cp -n'
+alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
+
+alias cbr='cd $cbr'
+alias grh='cd $grh'
+alias grb='cd $grb'
+alias grd='cd $grd'
+alias fau='cd $fau'
+alias rgr='cd $rgr'
+alias rbc='cd $rbc'
+alias ulb='cd $ulb'
+alias bcs='cat /home/gredelonghi/docs/bash-shortcuts.chtsht'
+alias ddir='bash /home/gredelonghi/docs/print-only-subdirectories.txt'
+alias hst='history'
+alias xx='logout'
+
+# --------------------------------------------------------
+
+alias godos='source $HOME/bin/godossrc.sh'

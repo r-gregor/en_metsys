@@ -1,0 +1,12 @@
+Font=Consolas
+FontHeight=10
+BackgroundColour=13,13,13
+CursorColour=255,0,0
+CursorType=block
+Locale=sl_SI
+Charset=UTF-8
+Term=xterm
+Transparency=medium
+OpaqueWhenFocused=no
+ThemeFile=
+Scrollbar=none

@@ -1,0 +1,21 @@
+
+--------------------------------------------------------------------------------------------------------------
+mesto                           username                                password                brskalnik
+--------------------------------------------------------------------------------------------------------------
+https://ris-jhl01.jhl.si/       gredelonghi                             gregor167               IE, FF
+http://jpe-nukleus.jhl.si       gredelonghi                             gregor167               IE, FF
+https://mail.jhl.si             gregor.redelonghi@energetika-lj.si      /En/nm2:dt:NUM(18)/     IE, FF
+--------------------------------------------------------------------------------------------------------------
+https://accounts.firefox.com    gredelonghi@gmail.com                   /Ff/nm3:qmrk:yr/        FF
+https://novi.lopolis.si         668912400                               ršn3881                 FF
+https://quora.com               gredelonghi@gmail.com                   z-dt:m-dt:s-dt          FF
+https://zoom.us                 gredelonghi@gmail.com                   /Zm/nm3:qmrk:yr/        FF
+https://accounts.google.com     ma5ter.yqda                             z-dt:m-dt:s-dt:t-dt     FF
+https://github.com              r-gregor                                z-dt:m-dt:s-dt:t-dt     FF
+https://idp.aai.arnes.si        srede@os-majdevrhovnik.si               8ubkivum                FF
+https://www.linkedin.com        gregor.redelonghi@energetika-lj.si      gregor167               IE, FF
+https://login.yahoo.com         rgregor.rgr@yahoo.com                   z-dt:m-dt:s-dt:t-dt     FF
+https://login.yahoo.com         gredelonghi@yahoo.com                   dt:Hy:dt:nm3:ry:dt      FF
+
+
+--------------------------------------------------------------------------------------------------------------

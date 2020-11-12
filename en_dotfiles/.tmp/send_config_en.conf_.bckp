@@ -1,0 +1,9 @@
+# define email variables:
+# Header info:
+gr_SRV='mail.jhl.si:587'
+gr_FROM="gregor.redelonghi@energetika-lj.si"
+gr_TO='gredelonghi@gmail.com'
+
+# Credentals:
+gr_UNM="gregor.redelonghi@energetika-lj.si"
+gr_PSWD='/En/gr.17/'

@@ -1,0 +1,1000 @@
+ 1431348702
+mput dnevno.html dnevno-black.html
+ 1431348707
+exit
+ 1431348735
+lftp u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1431348737
+ls
+ 1431348743
+cd public_html/dnevno/
+ 1431348745
+ls
+ 1431348755
+rm dnevno-2.html 
+ 1431348764
+rm dnevno-black-2.html 
+ 1431348773
+mput dnevno.html dnevno-black.html
+ 1431348777
+exit
+ 1431348805
+lftp r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1431348807
+ls
+ 1431348815
+cd dnevno/
+ 1431348816
+ls
+ 1431348823
+mrm *2*
+ 1431348825
+ls
+ 1431348833
+mput dnevno.html dnevno-black.html
+ 1431348858
+exit
+ 1431348861
+lftp b22_15819044:z7m17s11@ftp.byethost22.com
+ 1431348863
+ls
+ 1431348867
+cd htdocs/dnevno/
+ 1431348869
+ls
+ 1431348875
+mrm *2*
+ 1431348876
+ls
+ 1431348889
+rm -r ./dnevno
+ 1431348892
+ls
+ 1431348903
+mput dnevno.html dnevno-black.html
+ 1431348908
+exit
+ 1431938956
+lftp gregorr:zala00@ftp.volja.net
+ 1431938957
+ll
+ 1431938959
+ls
+ 1431938962
+cd dnevno/
+ 1431938976
+mput dnevno*.html
+ 1431938993
+exit
+ 1431939014
+lftp gregorr:zala00@ftp.volja.net
+ 1431939021
+mput dnevno*.html
+ 1431939029
+exit
+ 1431939034
+lftp u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1431939042
+exit
+ 1431939046
+lftp gregorr:zala00@ftp.volja.net
+ 1431939049
+ls
+ 1431939057
+rn dnevno*
+ 1431939063
+rm dnevno*
+ 1431939070
+mrm dnevno*
+ 1431939073
+cd dnevno/
+ 1431939081
+mput dnevno*.html
+ 1431939087
+ll
+ 1431939088
+ls
+ 1431939102
+mrm *2*
+ 1431939104
+ls
+ 1431939106
+cd
+ 1431939108
+exit
+ 1431939114
+lftp u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1431939115
+ls
+ 1431939121
+cd public_html/dnevno/
+ 1431939128
+mput dnevno*.html
+ 1431939132
+ls
+ 1431939134
+cd
+ 1431939136
+exit
+ 1431939140
+lftp r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1431939141
+ls
+ 1431939169
+cd dnevno/
+ 1431939181
+mput dnevno*.html
+ 1431939186
+ls
+ 1431939188
+exit
+ 1431939193
+lftp b22_15819044:z7m17s11@ftp.byethost22.com
+ 1431939195
+ls
+ 1431939202
+cd htdocs/dnevno/
+ 1431939210
+mput dnevno*.html
+ 1431939212
+ls
+ 1431939215
+exit
+ 1432722560
+lftp gregorr:zala00@ftp.volja.net
+ 1432722563
+ls
+ 1432722566
+cd dnevno/
+ 1432722568
+ls
+ 1432722584
+exit
+ 1432722602
+lftp gregorr:zala00@ftp.volja.net
+ 1432722605
+cd dnevno/
+ 1432722616
+mput dnevno.html dnevno-black.html
+ 1432722626
+exit
+ 1432722630
+lftp u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1432722632
+ls
+ 1432722637
+cd public_html/dnevno/
+ 1432722643
+mput dnevno.html dnevno-black.html
+ 1432722648
+exit
+ 1432722651
+lftp r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1432722653
+ls
+ 1432722667
+cd dnevno/
+ 1432722670
+mput dnevno.html dnevno-black.html
+ 1432722673
+exit
+ 1432722678
+lftp b22_15819044:z7m17s11@ftp.byethost22.com
+ 1432722680
+ls
+ 1432722686
+cd htdocs/dnevno/
+ 1432722689
+mput dnevno.html dnevno-black.html
+ 1432722691
+exit
+ 1439279215
+lftp gregorr:zala00@ftp.volja.net
+ 1439279218
+ls
+ 1439279245
+exit
+ 1439279253
+lftp b22_15819044:z7m17s11@ftp.byethost22.com
+ 1439279255
+ls
+ 1439279260
+exit
+ 1444209586
+lftp gregorr:zala00@ftp.volja.net
+ 1444209588
+ls
+ 1444209631
+exit
+ 1453102637
+lftp ftp.promico.si
+ 1453102640
+ll
+ 1453102642
+ls
+ 1453102654
+:q
+ 1453102657
+exit
+ 1453102665
+lftp ftp://ftp.promico.si
+ 1453102681
+exit
+ 1453102690
+lftp EXT-FTP:FtP@Prom1co!@ftp.promico.si
+ 1453102691
+ls
+ 1453102721
+exit
+ 1453102810
+lftp gregorr:zala00@ftp.volja.net
+ 1453102811
+ls
+ 1453102819
+exit
+ 1453201973
+lftp gregorr:zala00@ftp.volja.net
+ 1453201977
+ls
+ 1453201995
+exit
+ 1453202072
+lftp gregorr:zala00@ftp.volja.net
+ 1453202078
+ls
+ 1453202101
+lftp ftp.volja.net
+ 1453202105
+exit
+ 1453202119
+lftp ftp.volja.net
+ 1453202121
+ls
+ 1453202125
+exit
+ 1453455184
+lftp gregorr:zala00@ftp.volja.net
+ 1453455186
+ls
+ 1453455195
+exit
+ 1453455254
+lftp gregorr:zala00@ftp.volja.net
+ 1453455255
+ls
+ 1453455267
+exit
+ 1453455754
+set ftp:proxy ftp://172.17.3.64:8021
+ 1453455766
+open ftp.volja.net
+ 1453455769
+ls
+ 1453455775
+USER gregorr
+ 1453455779
+ls
+ 1453455796
+exit
+ 1453455896
+set ftp:proxy ftp://172.17.3.64:8021
+ 1453455911
+set ftp:passive-mode 0
+ 1453455919
+open ftp.volja.net
+ 1453455923
+USER gregorr
+ 1453455930
+ls
+ 1453455948
+exit
+ 1453456338
+lftp gregorr:zala00@ftp.volja.net
+ 1453456341
+l
+ 1453456343
+ls
+ 1453456358
+exit
+ 1453456563
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1453456565
+ls
+ 1453456588
+exit
+ 1453456814
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1453456816
+ls
+ 1453456818
+exit
+ 1453456823
+lftp -e "set ftp:passive-mode 0" u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1453456826
+ls
+ 1453456843
+exit
+ 1453456849
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1453456851
+ls
+ 1453456855
+exit
+ 1453457147
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1453457148
+ls
+ 1453457153
+cd logs/
+ 1453457154
+ls
+ 1453457164
+cd access/
+ 1453457165
+ls
+ 1453457171
+cd ../..
+ 1453457173
+ls
+ 1453457176
+cd htdocs/
+ 1453457177
+ls
+ 1453457179
+cd
+ 1453457180
+exit
+ 1453457796
+lftp ftp://gredelonghi:e4da2@ftp.energetika-lj.si
+ 1453457798
+ls
+ 1453457806
+exit
+ 1460710340
+lftp ftp.oreilly.com
+ 1460710351
+ls
+ 1460710376
+exit
+ 1460710441
+lftp ftp.oreilly.com
+ 1460710443
+ls
+ 1460710483
+exit
+ 1464700936
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1464700942
+exit
+ 1464700963
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1464700965
+ls
+ 1464700968
+cd htdocs/
+ 1464700972
+cd OGLASI/
+ 1464700974
+cd kolo/
+ 1464700975
+ls
+ 1464700983
+put oglas-kolo.html 
+ 1464701031
+ls
+ 1464701041
+grep -i cena oglas-kolo.html 
+ 1464701045
+exit
+ 1464701065
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1464701066
+ls
+ 1464701069
+cd htdocs/
+ 1464701072
+cd OGLASI/
+ 1464701074
+cd kolo/
+ 1464701080
+rm oglas-kolo.html
+ 1464701086
+put oglas-kolo.html 
+ 1464701088
+ls
+ 1464701114
+exit
+ 1473849303
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1473849305
+ls
+ 1473849309
+cd htdocs/
+ 1473849311
+ls
+ 1473849314
+cd dnevno/
+ 1473849316
+ls
+ 1473849325
+mrm dnevno*html
+ 1473849337
+mput dnevno*html
+ 1473849340
+ls
+ 1473849347
+exit
+ 1473849353
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1473849354
+ls
+ 1473849357
+cd dnevno/
+ 1473849358
+ls
+ 1473849367
+mrm dnevno*
+ 1473849374
+mput dnevno*
+ 1473849378
+ls
+ 1473849385
+rm dnevno-en_20151007.tar.gz 
+ 1473849387
+ls
+ 1473849394
+rm *bckp
+ 1473849399
+rm .*bckp
+ 1473849408
+rm dnevno.html.bckp 
+ 1473849410
+ls
+ 1473849415
+exit
+ 1473849418
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1473849420
+ls
+ 1473849496
+cd dnevno/
+ 1473849498
+ls
+ 1473849510
+mput dnevno*html
+ 1473849513
+ls
+ 1473849721
+exit
+ 1479464359
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1479464364
+exit
+ 1479464387
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1479464389
+ls
+ 1479464392
+cd dnevno/
+ 1479464394
+ls
+ 1479464403
+mput dnevno*
+ 1479464410
+exit
+ 1479464444
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1479464445
+ls
+ 1479464451
+cd htdocs/dnevno/
+ 1479464452
+ls
+ 1479464460
+mput dnevno*html
+ 1479464465
+exit
+ 1479464505
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1479464506
+ls
+ 1479464524
+cd dnevno/
+ 1479464532
+mput dnevno*html
+ 1479464536
+exit
+ 1479892405
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1479892407
+ls
+ 1479892409
+cd dnevno/
+ 1479892411
+ls
+ 1479892421
+mput dnevno*html
+ 1479892426
+exit
+ 1479892527
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1479892529
+ls
+ 1479892563
+cd dnevno/
+ 1479892572
+mput dnevno*html
+ 1479892576
+exit
+ 1479892581
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1479892583
+ls
+ 1479892589
+cd htdocs/dnevno/
+ 1479892595
+mput dnevno*html
+ 1479892600
+exit
+ 1479893065
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1479893068
+ls
+ 1479893071
+cd dnevno/
+ 1479893085
+mput dnevno*html
+ 1479893089
+exit
+ 1479893096
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1479893098
+ls
+ 1479893105
+cd htdocs/dnevno/
+ 1479893107
+mput dnevno*html
+ 1479893110
+exit
+ 1479893115
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1479893118
+ls
+ 1479893137
+cd dnevno/
+ 1479893138
+mput dnevno*html
+ 1479893142
+exit
+ 1479893149
+lftp -e "set ftp:passive-mode 0" u813115235:z7m17s11@rgregor.hostingsiteforfree.com
+ 1479893151
+ls
+ 1479893205
+exit
+ 1479893296
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1479893297
+ls
+ 1479893300
+exit
+ 1479893303
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1479893305
+ls
+ 1479893315
+exit
+ 1479893317
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1479893319
+ls
+ 1479893321
+exit
+ 1481014998
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1481015000
+ls
+ 1481015007
+cd dnevno/
+ 1481015009
+ls
+ 1481015020
+mput dnevno*
+ 1481015024
+exit
+ 1481015080
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1481015082
+ls
+ 1481015125
+cd dnevno/
+ 1481015127
+ls
+ 1481015135
+mput dnevno*
+ 1481015138
+exit
+ 1481015187
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1481015189
+ls
+ 1481015196
+cd htdocs/dnevno/
+ 1481015199
+ls
+ 1481015205
+mput dnevno*
+ 1481015208
+exit
+ 1481032191
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1481032193
+ls
+ 1481032206
+mput index.html index-black.html 
+ 1481032216
+cd tech/
+ 1481032224
+put tech/internet_hitrosti.html 
+ 1481032233
+cd ..
+ 1481032237
+cd dnevno/
+ 1481032246
+mput dnevno/dnevno*html
+ 1481032253
+exit
+ 1481032266
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1481032268
+ls
+ 1481032358
+mput index*html
+ 1481032366
+cd dnevno/
+ 1481032375
+mput dnevno/dnevno*html
+ 1481032377
+cd ..
+ 1481032380
+cd tech/
+ 1481032384
+put tech/internet_hitrosti.html 
+ 1481032387
+exit
+ 1481032392
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1481032394
+ls
+ 1481032397
+cd htdocs/
+ 1481032398
+ls
+ 1481032406
+mput index*hml
+ 1481032411
+mput index*html
+ 1481032414
+cd dnevno/
+ 1481032422
+mput dnevno/dnevno*html
+ 1481032427
+cd ../tech/
+ 1481032432
+put tech/internet_hitrosti.html 
+ 1481032436
+exit
+ 1488191931
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1488191933
+ls
+ 1488191999
+exit
+ 1488192014
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1488192016
+ls
+ 1488192023
+cd htdocs/dnevno/
+ 1488192038
+mput dnevno*html
+ 1488192042
+ls
+ 1488192073
+exit
+ 1488192079
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1488192080
+ls
+ 1488195933
+cd dnevno
+ 1488195943
+mput dnevno*html
+ 1488195946
+exit
+ 1488195988
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1488196325
+ls
+ 1488196504
+exit
+ 1488463415
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1488463417
+ls
+ 1488463866
+exit
+ 1512993259
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1512993261
+ls
+ 1512993263
+cd htdocs/
+ 1512993265
+ls
+ 1512993284
+mput index*html
+ 1512993289
+quit
+ 1512993307
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1512993312
+cd htdocs/
+ 1512993313
+ls
+ 1512993318
+mput index*html
+ 1512993330
+cd dnevno/
+ 1512993350
+mput dnevno*html checkout.html
+ 1512993373
+mput dnevno/dnevno*html dnevno/checkout.html 
+ 1512993380
+quit
+ 1512993446
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1512993449
+ls
+ 1512993797
+mput index*html
+ 1512993959
+mput dnevno/dnevno*html dnevno/checkout.html 
+ 1512993964
+exit
+ 1512994077
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1512994101
+ls
+ 1512994135
+mrm dnevno*html checkout.html 
+ 1512994139
+cd dnevno/
+ 1512994143
+mput dnevno/dnevno*html dnevno/checkout.html 
+ 1512994148
+exit
+ 1513079733
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1513079742
+cd htdocs/dnevno/
+ 1513079750
+!cd
+ 1513079754
+!pwd
+ 1513079771
+!cd ~
+ 1513079773
+!pwd
+ 1513079776
+exit
+ 1513079791
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1513079796
+cd htdocs/dnevno/
+ 1513079800
+put checkout.html 
+ 1513080005
+exit
+ 1513080010
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1513080180
+ls
+ 1513080183
+cd dnevno/
+ 1513080188
+put checkout.html 
+ 1513080192
+exit
+ 1513080200
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1513080201
+ls
+ 1513083834
+exit
+ 1515061629
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1515061631
+ls
+ 1515061640
+exit
+ 1515061648
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1515061650
+ls
+ 1515061671
+exit
+ 1515061753
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1515061755
+ls
+ 1515061813
+cd dnevno/
+ 1515061829
+ls
+ 1515061838
+put checkout.html 
+ 1515061905
+exit
+ 1515061916
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1515061918
+ls
+ 1515061924
+cd htdocs/dnevno/
+ 1515061929
+put checkout.html 
+ 1515061998
+exit
+ 1515417272
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1515417277
+exit
+ 1515417301
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1515417304
+ls
+ 1515417309
+cd dnevno/
+ 1515417314
+put checkout.html 
+ 1515417319
+exit
+ 1515417339
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1515417341
+ls
+ 1515417347
+cd htdocs/dnevno/
+ 1515417351
+put checkout.html 
+ 1515417356
+exit
+ 1517994400
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1517994402
+ls
+ 1517994405
+cd htdocs/
+ 1517994407
+ls
+ 1517994408
+cd
+ 1517994411
+exit
+ 1517994415
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1517994416
+ls
+ 1517994602
+exit
+ 1542635030
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1542635033
+ls
+ 1542635070
+exit
+ 1542635203
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1542635205
+ls
+ 1542635210
+cd dnevno/
+ 1542635220
+mput dnevno.html dnevno-black.html 
+ 1542635224
+exit
+ 1542635231
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1542635233
+ls
+ 1542635238
+cd htdocs/
+ 1542635239
+ls
+ 1542635242
+cd dnevno/
+ 1542635243
+ls
+ 1542635251
+mput dnevno.html dnevno-black.html 
+ 1542635255
+exit
+ 1567501303
+lftp -e "set ftp:passive-mode 0" gregorr:zala00@ftp.volja.net
+ 1567501307
+ls
+ 1567501318
+exit
+ 1567501321
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1567501324
+ls
+ 1567501351
+exit
+ 1567501355
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1567501359
+ls
+ 1567501373
+exit
+ 1567501417
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1567501419
+ls
+ 1567501464
+exit
+ 1567501467
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1567501470
+ls
+ 1567501475
+cd htdocs/
+ 1567501476
+ls
+ 1567501480
+cd dnevno/
+ 1567501487
+!ls
+ 1567501496
+exit
+ 1567501519
+lftp -e "set ftp:passive-mode 0" b22_15819044:z7m17s11@ftp.byethost22.com
+ 1567501521
+ls
+ 1567501526
+cd htdocs/dnevno/
+ 1567501536
+mput dnevno.html dnevno-black.html 
+ 1567501541
+cd
+ 1567501544
+exit
+ 1567506605
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1567506618
+ls
+ 1567506628
+cd dnevno/
+ 1567506630
+!ls
+ 1567506637
+exit
+ 1567506658
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1567506677
+ls
+ 1567506680
+exit
+ 1567506691
+lftp -e "set ftp:passive-mode 0" r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+ 1567506698
+ls
+ 1567506762
+cd dnevno/
+ 1567506763
+ls
+ 1567506772
+mput dnevno.html dnevno-black.html 
+ 1567506776
+exit

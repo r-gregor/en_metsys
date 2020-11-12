@@ -1,0 +1,5 @@
+﻿FTP acces to [lftp]:
+	lftp 'gregorr:zala00'@ftp.volja.net
+	lftp 'u813115235:z7m17s11'@rgregor.hostingsiteforfree.com
+	lftp 'r-gregor.slohosting.com:z7m17s11'@free.slohosting.com
+	lftp 'b22_15819044:z7m17s11'@ftp.byethost22.com

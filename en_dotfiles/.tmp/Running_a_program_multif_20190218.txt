@@ -1,0 +1,121 @@
+filename: Running_a_program_multif_20190218.txt
+https://www.reddit.com/r/askscience/comments/2b24y7/what_happens_inside_the_computer_when_i_run_a/
+
+What happens inside the computer when i run a program?
+
+Whenever you start a program, you're basically asking the operating system to run it for you.
+
+The operating system allocates space in RAM for the program, and adds the programs registers (basically
+current information about the program) to a list which the operating system can access.
+
+This list is then scheduled (such that the operating system can give a turn to every program that is
+running). This is called context switching.
+
+From then on, the CPU executes the program's instructions (which is basically what is made when you
+compile a program). It keeps track of which instruction was last executing by keeping track of an
+instruction pointer register.
+
+But how does a CPU execute a program, How does CPU ''Know'' how to convert the commands into Electrical
+impulses and send them through Logic gates and how does it convert those outputs(which are again electrical
+signals) from them to what we want to see?
+
+Im gonna go with a very simple architecture , but it should give you an idea of how its actually done.
+
+I'm also gonna assume that you know how logic gates work, and how you can compose them to create modules.
+
+One more thing, when i mention memory, imagine it being like a recordbook that you go and write or read
+stuff from - and think of registers as your mind (you can remember a small amount of stuff in your head,
+but you can write it down in your recordbook to remember tons of stuff).
+
+CPU's have what we call cycles (hence the frequency ratings on a CPU). Say you have a 3Ghz CPU. That
+"basically" means it can do 3 billion cycles a second. Also, its very important to understand that
+CPU's have a set number of possible instructions. It can't learn any new instructions. The CPU is made
+to implement every possible instruction you would need, and you tell it which one to use every time.
+
+This is what a very simple CPU looks like:
+http://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Data_Forwarding_(Two_Stage).svg/370px-Data_Forwarding_(Two_Stage).svg.png
+
+Ignore the bottom row for now. As you can see there are 5 different "stages" where data can pass
+through. Each of these take one cycle. You can think of each of these stages as little chips with wires
+coming out of them (modules composed of logic gates). Each stage can pass information to the next by
+setting a voltage on each of the wires. Effectively, if you have 32 wires being shared between two stages,
+you can pass 32 bits of information to the next stage.
+
+IF - (Instruction Fetch) This module usually takes in the Instruction pointer register (which i mentioned
+in my previous post) and goes to main memory to fetch the actual instruction. This is what its input
+and output would look like (in hex):
+
+input: 0xAF1CF400 (memory address of program instruction)
+
+output: (also in hex. Assuming MIPS instruction. Click here to see the format) 0x001BC460
+
+You can basically just think of the IF stage by looking at this. All it does it that it maps the memory
+addresses from the left of the image, to the instructions on the right. Except that instead of the
+instructions being somewhat readable to us like in the image, they are in bits.
+
+ID - (Instruction Decode) Once you have the instruction, you need to interpret what it means. This now
+becomes a simple digital systems problem. For example. Lets say that your CPU supports adding, subtracting,
+multiplication, and division. You can represent which instruction you'd like to do by encoding it into
+two bits. 00 for adding, 01 for subtracting, 10 for multiplication, 11 for division. You can feed these
+two wires into a module called a demultiplexer, and it will basically reroute your input to ONLY the
+hardware structure that corresponds to the instruction. This is basically what the ID stage does, it
+reroutes parameters to the correct hardware to perform the desired instruction.
+
+EX - (Execution) This is where the math happens. the EX stage typically has what is called an ALU
+(Arithmetic Logic Unit), which can handle basic arithmetic.
+
+MEM - (Memory) Sometimes you want to do operations using data from memory. the MEM stage takes care of
+looking stuff up on memory. Why would the MEM stage be after the EX stage? In MIPS architecture, you
+cannot do operations on memory directly - you have to fetch it first. So in order to add 1 to a number
+in memory, you'd have to issue a load instruction first to the number, then you can add 1 to it. Where
+does the result get stored to then if we need a separate instructions to read and write from memory? The
+next stage answers that:
+
+WB - (Write Back) This stage writes to registers. Think of this as having the answer to a math problem
+in your head, before you actually write it down.
+
+TL;DR - the CPU doesnt know anything. Its really just doing lookups through digital modules.
+
+
+---
+https://computer.howstuffworks.com/computer-run-without-operating-system.htm
+
+Can your computer run without an operating system?
+
+We all have our favorite operating system -- some of us will only pick from the tree of Apple, while others prefer the Windows seat. It's easy to assume that a computer without an operating system is as useful as a cup of coffee without the cup. But what does an operating system do, and can a computer still compute without it?
+
+Let's tackle the first question before we get into the nitty-gritty of a system-less computer. An operating system is basically the general contractor of the computer. While the programs are busy doing their one specialized thing -- plumbing, electrical, carpentry -- the operating system is overseeing them all, communicating what they need to the processor and providing a common language that they can all work with to stay on the same page.
+
+There are a few other things your operating system does that you probably don't think about. For instance, it's the operating system (not just the hard drive) that's going to decide how to manage memory. The operating system needs to delegate how much memory each process uses and make sure no memory overlaps. Also keep in mind that your home computer is most likely a single-user, multitasking operating system. That means you only have one processor, but it can run many programs at once.
+
+But here's the kicker: it can't actually do that.
+
+When you're downloading files, working on a spreadsheet and listening to music, your computer just appears to be doing these things simultaneously. In reality, the computer is switching between processes at extremely high speeds -- so high, you don't know it. While you're under the illusion that your CPU and operating system have a hand in every pot, your programs are under the impression that they have complete control of the operating system at any given moment.
+
+So really, your operating system is designed to let the CPU deal with one thing at a time. But because it's a computer and not a harried secretary, it can multitask so fast that the user wouldn't even know.
+
+Now that we know a few of the ways our operating system works for us, let's get into what a computer without an operating system would look like.
+
+If an operating system does all the things we know it does, it seems downright impossible for a computer to exist without one.
+
+In reality, the earliest computers didn't have operating systems; they were huge machines tasked with one program at a time. For that reason, they didn't really need operating systems. In fact, the earliest computers required a user to physically connect and disconnect wires from a plug board to retrieve computations. But if you don't have an operating system, can you make your computer do anything?
+
+Yes. But you have a lot of work to do. Without an operating system using and enforcing a standard, systematic approach to running the computer, you're put in the position of writing code (or programs) that must tell the computer exactly what to do. So if you want to type up a document in a word processing program, you'd have to create from scratch code that tells your computer to respond to each character pressed on your keyboard. Then you'd have to write a code that told the computer how those responses must translate to a screen. You'd have to tell your computer how to draw the character you want! Think of every single option or possibility your word processing program has. You'd have to write code for every single one of those directly onto your hard drive.
+
+Let's go back to our general contractor analogy. If we're building a house, we'll want it to have certain features like plumbing, electrical work and windows. In a computer, we also want features like a program that creates documents, one that accesses the Internet and one that stores our photos. Without an operating system, it's not just that your "carpenter" doesn't know where to hammer in nails to a beam to get the room you want -- it's also that you have to forge the hammers, and you have to create the nails.
+
+An operating system provides a uniform set of screws, lumber and any other material you need. It can go back and forth between rooms so fast you didn't even know it left the one you were in.
+
+And that's really important, because here's another thing: Remember how we were talking about the operating system only being able to concentrate on one thing at a time? Well, without one, your computer could run one program. Period. You could create a document. You could save it. You could print it. But you couldn't look at that document and keep a clock running on your desktop. If you don't have an operating system, you're stuck doing one -- and only one -- process at a time.
+
+Starting from scratch on a computer is not for amateurs. If you're a serious engineer/developer, it is conceivable to use a computer without a preinstalled operating system. But for those of us who use their computer to do such vital tasks as keeping a spreadsheet of their Christmas list or checking out the latest Ryan Gosling meme, it's probably not so necessary. And remember, an operating system-less computer is only good for one program. Probably worth it to pony up the money for an operating system.
+Related Articles
+
+    How Operating Systems Work [ https://computer.howstuffworks.com/operating-system.htm ]
+    How Web Operating Systems Work [ https://computer.howstuffworks.com/web-operating-system.htm ]
+    How BIOS Works [ https://computer.howstuffworks.com/bios.htm ]
+
+
+---
+
+    

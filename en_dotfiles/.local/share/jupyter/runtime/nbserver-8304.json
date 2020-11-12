@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/gregor.redelonghi",
+  "password": false,
+  "pid": 8304,
+  "port": 8888,
+  "secure": false,
+  "token": "5a74cd3ad8506b53d2c102372399560248891c2dc04c4565",
+  "url": "http://localhost:8888/"
+}

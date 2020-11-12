@@ -1,0 +1,152 @@
+Quick Response Codes (QR Codes) are becoming one of the most popular barcode systems in the world, thanks to smartphones. Their usage is really versatile, from automotive, product packaging to online ticket services. Business started using QR Codes on their documents, business cards and advertisement to quickly reach them. In this tutorial we show you how to generate QR Codes. First, we create a simple QR Code for a website URL address. In the second example, we use a VCard to generate a QR Code. A vCard is a file format standard for electronic business cards.
+
+A barcode is a machine-readable optical label that contains information about the item to which it is attached. A QR Code (abbreviated from Quick Response Code) is the trademark for a type of matrix barcode (or two-dimensional barcode) first designed for the automotive industry in Japan. More recently, the system has become popular outside of the industry due to its fast readability and comparatively large storage capacity. A QR code uses black modules arranged in a square pattern on a white background. The information can be made up of four standardised encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store data.
+Maven Dependencies
+
+We use Apache Maven to manage our project dependencies. Include the following dependency in the projects pom.xml file.
+
+<dependency>
+    <groupId>net.glxn.qrgen</groupId>
+    <artifactId>javase</artifactId>
+    <version>2.0</version>
+</dependency>
+
+QRGen uses Zebra Crossing (ZXing) under the hood. ZXing is a liberal open source library, which can generate/parse almost all barcodes, including QR Codes. The downside is that you must write bloated code in order to generate a simple QR Code. QRGen wrote a layer on top of ZXing, exposing the power of the framework with a simple to use – builder pattern inspired – API programming model.
+Create QR Code
+
+Using QRGen you can easily create a QR code. It uses a builder pattern inspired API programming model. Which means you can simple chain every method an thus reducing the boiler plate code, you otherwise have to write. We start with the QRCode.from() static method where we pass in the URL of our website. Next, we configure the necessary configurations like: width, image type, etc. Then, we call the stream() method. This returns a ByteArrayOutputStream with the corresponding generated QR Code. Finally, we write the output stream to disk.
+
+package com.memorynotfound.qrcode;
+
+import net.glxn.qrgen.core.image.ImageType;
+import net.glxn.qrgen.javase.QRCode;
+import java.io.*;
+
+public class CreateQrCode {
+
+    public static void main(String... args){
+        ByteArrayOutputStream bout =
+                QRCode.from("https://memorynotfound.com")
+                        .withSize(250, 250)
+                        .to(ImageType.PNG)
+                        .stream();
+
+        try {
+            OutputStream out = new FileOutputStream("/tmp/qr-code.png");
+            bout.writeTo(out);
+            out.flush();
+            out.close();
+
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Output
+simple java qr code generator example
+
+QR Code Example
+Create QR Code with VCard
+
+This example uses the same programming model as before. Instead of writing a URL, we include a VCard. A vCard is a file format standard for electronic business cards, which contains meta-data like: name, address, company, etc. First, we create an instance of the VCard. Next, we use the QRCode.from() static method where we pass in the VCard instance. Next, we configure the necessary configurations like: width, image type, etc. Then, we call the stream() method. This returns a ByteArrayOutputStream with the corresponding generated QR Code. Finally, we write the output stream to disk.
+
+package com.memorynotfound.qrcode;
+
+import net.glxn.qrgen.core.image.ImageType;
+import net.glxn.qrgen.core.vcard.VCard;
+import net.glxn.qrgen.javase.QRCode;
+import java.io.*;
+
+public class CreateQrCodeVCard {
+
+    public static void main(String... args){
+        VCard vCard = new VCard();
+        vCard.setName("memorynotfound.com");
+        vCard.setAddress("street 1, xxxx address");
+        vCard.setCompany("company Inc.");
+        vCard.setPhoneNumber("+xx/xx.xx.xx");
+        vCard.setTitle("title");
+        vCard.setEmail("info@memorynotfound.com");
+        vCard.setWebsite("https://memorynotfound.com");
+
+
+        ByteArrayOutputStream bout =
+                QRCode.from(vCard)
+                        .withSize(250, 250)
+                        .to(ImageType.PNG)
+                        .stream();
+
+        try {
+            OutputStream out = new FileOutputStream("/tmp/qr-code-vcard.png");
+            bout.writeTo(out);
+            out.flush();
+            out.close();
+
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Output
+simple java qr code generator example
+
+QR Code with VCard Example
+QRGen QR Code Generator Usages
+
+Here is a usage overview of the QRGen programming API model. When using special characters don’t forget to supply the correct encoding.
+
+// get QR file from text using defaults
+File file = QRCode.from("Hello World").file();
+
+// get QR stream from text using defaults
+ByteArrayOutputStream stream = QRCode.from("Hello World").stream();
+
+// override the image type to be JPG
+QRCode.from("Hello World").to(ImageType.JPG).file();
+QRCode.from("Hello World").to(ImageType.JPG).stream();
+
+// override image size to be 250x250
+QRCode.from("Hello World").withSize(250, 250).file();
+QRCode.from("Hello World").withSize(250, 250).stream();
+
+// override size and image type
+QRCode.from("Hello World").to(ImageType.GIF).withSize(250, 250).file();
+QRCode.from("Hello World").to(ImageType.GIF).withSize(250, 250).stream();
+
+// supply own outputstream
+QRCode.from("Hello World").to(ImageType.PNG).writeTo(outputStream);
+
+// supply own file name
+QRCode.from("Hello World").file("QRCode");
+
+// supply charset hint to ZXING
+QRCode.from("Hello World").withCharset("UTF-8");
+
+// supply error correction level hint to ZXING
+QRCode.from("Hello World").withErrorCorrection(ErrorCorrectionLevel.L);
+
+// supply any hint to ZXING
+QRCode.from("Hello World").withHint(EncodeHintType.CHARACTER_SET, "UTF-8");
+
+// encode contact data as vcard using defaults
+VCard johnDoe = new VCard("John Doe")
+                    .setEmail("john.doe@example.org")
+                    .setAddress("John Doe Street 1, 5678 Doestown")
+                    .setTitle("Mister")
+                    .setCompany("John Doe Inc.")
+                    .setPhoneNumber("1234")
+                    .setWebsite("www.example.org");
+QRCode.from(johnDoe).file();
+
+// if using special characters don't forget to supply the encoding
+VCard johnSpecial = new VCard("Jöhn Dɵe")
+                        .setAddress("ëåäöƞ Sträät 1, 1234 Döestüwn");
+QRCode.from(johnSpecial).withCharset("UTF-8").file();
+
+============================================================================

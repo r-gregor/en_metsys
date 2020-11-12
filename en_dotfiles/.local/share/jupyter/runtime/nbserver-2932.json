@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/gregor.redelonghi/majfajls/coding/PYTHON_en/PYTHON_en_testing",
+  "password": false,
+  "pid": 2932,
+  "port": 8888,
+  "secure": false,
+  "token": "41c1099f43727ebf5392d55cf4a5245bd7daca3d5048fb9e",
+  "url": "http://localhost:8888/"
+}

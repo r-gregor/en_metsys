@@ -1,0 +1,27 @@
+filename: Why-different-compilers-for-different-Os-es_20190218.txt
+https://www.daniweb.com/programming/computer-science/threads/232479/why-different-compilers-for-different-os
+
+Hello, I'm novice in computer science , please bear with me.
+
+I have studied some embedded systems and now I have just started learning PC programming in C . My question is when one complies a C program it is converted into a binary file right? That is machine language, 1s and 0s executable by the processor? But if that is the case then why must we use different compilers for different operating systems running on the same platform? A program compiled for Windows should run on Linux too? Why is that not so?
+
+
+***
+Because there are 2 parts to this, compiling and linking.
+
+Every processor or processor family has its own machine code instruction set. The compiler makes object code, and the linker combines them together into an excutable consisting of machine (native, unmaneged) code conforming to that instruction set.
+
+A native (hosted) compiler produces executables which run directly on the same type of CPU architechtite + operating system that the compiler runs on. A cross compiler howber is designed to run on a different platform (e.g you could build UNIX binaries for the SPARC CPU under Windows using a cross comiler)
+
+Even if they were a unified executable format betwen say, unix-like systems and windows, it wouldnt work because they do things differently. For example, the method for printing a character to the screen would be handled differenely between OSes. Also the character would be a different number of bytes depending on CPU and OS.
+
+***
+There are lots of different compilers for the same os too -- its called competition.
+
+The final result of a computer program is a binary list of bits read by the OS and processed by the CPU and associated devices. Operating Systems define specific ways in which that data should be read.
+I think an easy to grasp example is how an OS stores Data. This would be the FileSystem. Each OS writes files with a header containing meta-data called an i-node. Files written in a different OS would have different I-nodes and therefore, impossible to read properly. A compiler is a set of files and a program is a set of files. For a compiler to correcly associate the data correctly, those files should be written in - for the propper OS.
+Most OS code is written in C since it is less painful to write then assembly but low-level enough that you can do specific kernel-level operations.
+Another interesting thing to note is that, compilers don't necessarily have to be tied to a specific OS The Church-Turing thesis states that any computable function (i.e. a program) can be computed by a turing machine (a theoretical computer). This means that any software, theoretically, can run on any machine. This is how emulators work. If you've played MAME games or perhaps downloaded an amiga chipset emulator. This is also why OpenGL runs system independantly. It's not that compilers have to run on a specific OS, it just means that no one has bothered to implement the overhead to ensure that they can.
+Another good example would be PERL. When I write a windows PERL program in active perl, the statemnt system("pause") does just that. When I run the same program on my Solaris SPARC workstation, it has no idea what the pause command does
+
+---

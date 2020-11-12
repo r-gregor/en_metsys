@@ -1,0 +1,6 @@
+./bin/zze-error.log
+./.tmp/danes_20160412-1430.txt
+./.gnupg/secring.gpg
+./.gnupg/pubring.gpg
+./.config/mc/panels.ini
+

@@ -1,0 +1,18 @@
+[user]
+	name = r-gregor
+	email = gredelonghi@gmail.com
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[core]
+	editor = vim
+[push]
+	default = simple
+[color]
+	ui = false
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false

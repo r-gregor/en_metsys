@@ -1,0 +1,92 @@
+# -------------------------------------------------------------------------------
+
+# EXPORTs
+# =======
+
+export LESS="-QR"
+export HISTCONTROL=erasedups
+export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
+export HISTFILESIZE=5000
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
+# export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+export HISTTIMEFORMAT='%F %T '
+export EDITOR=/usr/bin/vim
+export TERM=rxvt-256color
+export CDNG=$HOME/majfajls/coding
+
+
+unset TMP
+unset TEMP
+export TMP=/tmp
+export TEMP=/tmp
+export gr_GR='/c/Users/gregor.redelonghi'
+export DBOT='/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT'
+export DBOP='/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_PYTHON'
+export DBOR='/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_RPi'
+export cugr='/c/Users/gregor.redelonghi'
+export BTP="$HOME/bin/testing-en/PYTHON-en_testing"
+# -------------------------------------------------------------------------------
+
+# VARIABLES
+# =========
+
+eval "`dircolors -b ~/.dircolorsrc`"
+
+
+### VARIABLES
+#
+_DEJT=$(date +%Y%m%d)
+_TAJM=$(date +%H%M)
+_DEJTT=${_DEJT}-${_TAJM}
+_TAJMSTMP="[ $(date +%Y%m%d-%H:%M:%S) ]"
+
+export _DEJT _TAJM _DEJTT _TAJMSTMP
+
+# -------------------------------------------------------------------------------
+
+# backspace = delete
+# ==================
+
+if tty --quiet; then
+stty erase '^?'
+fi
+
+# -------------------------------------------------------------------------------
+# added 20170201 - xcol_bash.sh --> colorising output (replaces grep ...)
+# source /home/forallusers/xcol_bash.sh 
+
+### win 7 path
+### yet to come ...
+#
+#
+export PYTHONPATH="/home/gregor.redelonghi/RUT/home/pbin"
+export PTN=$PYTHONPATH
+export PHOME="/home/gregor.redelonghi/RUT/home/pbin"
+export RUT="/home/gregor.redelonghi/RUT/"
+export JVR="/home/gregor.redelonghi/majfajls/coding/JAVA_en/JAVA_en_RUT"
+
+export JAVACP="$(cygpath -w /home/gregor.redelonghi/majfajls/coding/JAVA_en/JAVA_en_testing)"
+
+# 20191121 - for complinment to VSCode
+# export JAVA_HOME="/c/Users/gregor.redelonghi/myprogs/jdk-11"
+export JAVA_HOME="C:\Users\gregor.redelonghi\myprogs\jdk-11"
+export PATH="$(cygpath -u ${JAVA_HOME})/bin:$PATH"
+
+
+export PATH_TO_FX="C:\Users\gregor.redelonghi\myprogs\javafx-sdk-11.0.2\lib"
+
+### 2200526: MOVED TO startfuncs ...
+# set system codepage from 850 (856) to 65001 (utf-8)
+# cmd /c chcp 65001 &> /dev/null
+
+# 20200828 add path for node.js
+export PATH="${PATH}:/c/Users/gregor.redelonghi/myprogs/node-v12.18.3-win-x64"
+
+# 20200923 add path for dmd (Dlang compiler)
+export PATH="${PATH}:/c/Users/gregor.redelonghi/myprogs/dmd.2.093.1.windows/dmd2/windows/bin"
+
+### added 20200929
+# export GOROOT='C:\Users\gregor.redelonghi\myprogs\go1.13.3.windows-amd64\go'
+export GOROOT='C:\Users\gregor.redelonghi\myprogs\go1.15.2.windows-amd64\go'
+export PATH="${PATH}:/c/Users/gregor.redelonghi/myprogs/go1.15.2.windows-amd64/go/bin"

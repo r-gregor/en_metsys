@@ -1,0 +1,1 @@
+# export PS1='\e[0;m\e[0;32m\u\e[0;31m@\e[0;36mCygwin-1.7.x(en)\e[0;m\e[1;37m\n[ ${PWD} ]\e[m \n> ' ### bela=1;

@@ -1,0 +1,224 @@
+# --------------------------------------------------------
+# ALIASES:
+
+unalias -a
+
+alias ggo='source /home/gregor.redelonghi/majfajls/coding/gooo/gooo.sh'
+
+alias ls='\ls --group-directories-first --time-style=long-iso --color=always'
+alias lss='\ls --group-directories-first --time-style=long-iso'
+alias l1='ls -1F'
+alias ll='lss -F -gG --time-style=long-iso'
+alias llc='ll --color'
+alias lst='lss -t'
+alias la='ll -A'
+alias lac='lss -AlF'
+alias lo='ls -gotrF'
+alias lld='ls -l --time-style=long-iso | grep ^d'
+alias lsd='ls -d */'
+alias cl='clear'
+alias cls='clear'
+alias cp='cp -n'
+alias grepc='GREP_COLOR="01;31" LANG=C grep --color=auto'
+
+alias bcs='cat /home/gregor.redelonghi/docs/bash-shortcuts.chtsht'
+alias ddir='bash /home/gregor.redelonghi/docs/print-only-subdirectories.txt'
+alias hst='history'
+alias xx='logout'
+alias opnu='source /home/gregor.redelonghi/majfajls/coding/opn/opn.u.sh'
+alias opnw='source /home/gregor.redelonghi/majfajls/coding/opn/opn.w.sh'
+
+# --------------------------------------------------------
+
+alias godos='source $HOME/majfajls/coding/gooo/godossrc.sh'
+
+# --------------------------------------------------------
+
+alias ydbak='yes | ddbak'
+alias ydlog='yes | ddlog'
+alias ydd='yes | ddbak && yes | ddlog'
+alias pozeni='source $HOME/majfajls/coding/00_ukazi/run-oneliner.sh'
+
+# --------------------------------------------------------
+
+alias stt='stat -c "%A %a %n" '
+alias cp='cp -nv'
+alias mv='mv -nv'
+alias rm='rm -Iv'
+alias cpn='yes n | cp -iv'
+alias sbr='clear && source ~/.bashrc'
+alias vvm='vim ~/.vimrc'
+alias vbr='vim ~/.bashrc'
+alias vaf='vim /home/forallusers/aliases_forall'
+alias lys='/opt/lynis-1.3.0/lynis --check-all -Q'
+alias rmi='rm -vi'
+alias llh='ls -lAd --color ./.*'
+
+# --------------------------------------------------------
+# alias dbot='cd /c/Users/gregor.redelonghi/DBOT'
+#
+alias dbot='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_TXT'
+alias dbop='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_PYTHON'
+alias dbor='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_RPi'
+alias doma='cd $DOMA'
+alias dboj='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_JAVA' 
+alias dbog='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_GO' 
+
+# --------------------------------------------------------
+alias hstl="history > $HOME/seznami/history-en.dat_$(date +%Y%m%d-%H%M%S)"
+
+alias ydlF='~/majfajls/coding/youtube-dl.exe -F '
+alias ydl="~/majfajls/coding/youtube-dl.exe -o '%(title)s_%(upload_date)s.%(ext)s'"
+
+### alias lynxd='lynx -dump -width=100 '
+alias lynxd='/home/gregor.redelonghi/majfajls/coding/lynxdump/lynxdump-webpage-to-file.sh '
+alias sov='set -o vi'
+alias usov='set -o emacs'
+# --------------------------------------------------------
+
+alias np='~/majfajls/coding/00_ukazi/np.sh'
+
+# --------------------------------------------------------
+alias llg='llc -gG'
+
+####
+# TURN LINE WRAPPING OFF
+alias wrapoff='printf "\033[?7l"'
+
+# TURN LINE WRAPPING ON
+alias wrapon='printf "\033[?7h"'
+
+# show IFS value [$' \t\n' -- space; $'\n' -- newline
+alias showifs='printf %q "$IFS"'
+
+# go to /c/Users/gregor.redelonghi ...
+alias cdg='export CDG=/c/Users/gregor.redelonghi; cd $CDG'
+alias cdf='export CDF=/home/forallusers; cd $CDF'
+alias cdr="source ~/majfajls/coding/cdr.sh"
+alias kateof='cat <<EOF | ~/majfajls/coding/send_mail/snd.mm.hm.sh'
+
+# added simple AAA comand to start zze:
+alias aaa='zze'
+
+# added 20160421 -- new func in /home/forallusers/funclist -- upup
+alias up='upup'
+
+
+# added 20160516 -- screen layouts ...
+alias sl1='screen -X source ~/.screen-lyt-1' # 1-st H split, lower region V-split
+alias sl2='screen -X source ~/.screen-lyt-2' # 1-st V-split, right region H-split
+alias sl3='screen -X source ~/.screen-lyt-3' # 2x V-split, 2x H-split
+
+# added 20160819 ---------------------------------------------------------------
+# yes to sndhm --> lns from $HOME/majfajls/coding/sndhm.sh
+alias sndhmy='yes | sndhm'
+
+# ------------------------------------------------------------------------------
+#
+alias w3md='/home/gregor.redelonghi/majfajls/coding/w3mdump/w3mdump_webpage_to_file.sh '
+
+# added 20161110 ---------------------------------------------------------------
+alias w3m_d='w3m -dump -cols 110'
+alias lynx_d='lynx -dump -width=110'
+
+# added 20161116 -- new python3 default --> some scripts to be called from python2:
+alias sndm-enpy='python2 ~/majfajls/coding/send_mail/sendmymail-en.py'
+
+alias colors='bash ~/majfajls/coding/colors_show_onl.sh'
+alias grpytn='grep -A10 http /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_PYTHON/python_yourownlinux-com_python-tutorials-multyf_2016*.txt'
+
+alias p3='/usr/bin/python3'
+
+alias YRB='yes | METSYS/RSYNC_BACKUP'
+alias YQB='yes | METSYS/QRSYNC_BACKUP'
+
+# added 20171024
+# vim seznam.pnp --> create dir structure in 2017 folder
+alias vszn='vim ~/majfajls/coding/pnp/seznam.pnp'
+
+alias ggl='cygstart /c/Users/gregor.redelonghi/AppData/Local/Google/Chrome/Application/chrome.exe'
+
+alias wdf='watch -d -n1 df'
+alias wdfh='watch -d -n1 df -h'
+alias ktmux='tmux kill-server'
+alias ktmx='tmux kill-server'
+alias tmux='tmux -2' # 256 colors terminal
+
+# added 20180509
+# alias jv='/c/Users/gregor.redelonghi/myprogs/jdk-10/bin/java'
+# alias jvc='/c/Users/gregor.redelonghi/myprogs/jdk-10/bin/javac'
+alias jv='/c/Users/gregor.redelonghi/myprogs/jdk-11/bin/java'
+alias jvc='/c/Users/gregor.redelonghi/myprogs/jdk-11/bin/javac'
+
+
+alias du1='du -h -d1 $PWD/* | sort -hr | less'
+
+
+# added 20180905
+alias duh='du -sh ./* | sort -hr'
+
+# added 20181123
+alias dfjd='df -h | grep "/j\|/d"'
+#
+# added 20181127
+alias acr='cygstart /c/Program\ Files\ \(x86\)/Adobe/Acrobat\ Reader\ DC/Reader/AcroRd32.exe'
+
+alias jptr='jupyter notebook --no-browser'
+
+# added 20190227: starting python 3 simple http server on port 8080 --> browser URL: localhost:8080
+alias ptnhttp='python3 -m http.server 8080'
+
+
+# added 20190327
+alias sortl1='ls -ltF --time-style="+%Y%m%d %H-%M-%S" | cut -b 51- | sort -n'
+
+# added 20190705
+MFS="/home/gregor.redelonghi/majfajls/coding"
+alias mfcj='cd $MFS/JAVA_en'
+alias mfcp='cd $MFS/PYTHON_en'
+
+# added 20191014
+alias tree='tree --charset ASCI --noreport'
+
+
+# VSCode start
+# VSC="VSCode-win32-x64-1.40.1"
+# VSC="VSCode-win32-x64-1.41.1"
+# VSC="VSCode-win32-x64-1.42.0"
+# VSC="VSCode-win32-x64-1.44.2"
+# VSC="VSCode-win32-x64-1.44.2"
+# VSC="VSCode-win32-x64-1.47.3"
+# VSC=VSCode-win32-x64-1.48.1
+# VSCode-win32-x64-1.48.2
+# VSCode-win32-x64-1.49.0
+# VSC=VSCode-win32-x64-1.49.3
+VSC=VSCode-win32-x64-1.50.1
+
+alias vscode="cygstart /c/Users/gregor.redelonghi/myprogs/${VSC}/Code.exe"
+alias code="vscode"
+
+# node.js start
+NODE=node-v12.18.3-win-x64
+# alias node="cygstart /c/Users/gregor.redelonghi/myprogs/${NODE}/node.exe"
+alias node="/c/Users/gregor.redelonghi/myprogs/${NODE}/node.exe"
+
+# added 20200820
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
+alias l.='ls -a | egrep "^\."'
+
+alias show='find /usr/local/bin/ -type l | \grep "_" | xargs ls --color'
+alias showall='find /usr/local/bin/ -type l | xargs ls --color'
+alias show00='find /usr/local/bin/ -type l | \grep "_" | xargs ls -l | \grep 00 | cut -b61- | cut -d" " -f1'
+
+# added 20200928
+# neded to update: python3 -m pip install ranger-fm
+alias r='ranger'
+alias dotfiles='/usr/bin/git --git-dir=/home/gregor.redelonghi/dotfiles_en --work-tree=/home/gregor.redelonghi'
+alias forallusers_en='/usr/bin/git --git-dir=/home/gregor.redelonghi/forallusers_en --work-tree=/home/forallusers'
+
+alias rclone='/usr/local/bin/rclone -v'
+

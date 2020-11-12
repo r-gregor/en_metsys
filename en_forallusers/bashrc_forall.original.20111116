@@ -1,0 +1,104 @@
+#########################################################################################
+### USER SETTINGS COPIED FROM CYGWIN ###
+
+#######################
+### dodano 20100127 ###
+#######################
+
+### --------------------------------------------------------
+
+### ALIASES:
+
+alias ls='ls -hF --color=always --group-directories-first'
+alias ll='ls -lF'
+alias la='ll -A'
+alias lld='ll -d'
+alias lsd='ls -d'
+alias cl='clear'
+# alias w3m='w3m -M'
+alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
+
+### --------------------------------------------------------
+
+### BASH-PROMPT
+
+export PS1='\e[0;m\n\e[0;32m\H\e[0;m|\e[0;31m\u\e[0;m|\e[0;33m\t\e[0;37m\n[ ${PWD} ]\e[m \n> ' ### 
+bela=1;
+# export PS1='\n\[\e[0;31m\]\u@\H \[\e[1;37m\][ \w ]\[\e[0m\]\n> '
+# export PS1='\n\[\e[0;31m\]\u |\A| \[\e[1;37m\][ \w ]\[\e[0m\]\n> '
+
+### --------------------------------------------------------
+
+### fukcija, pajpne ukaz na "less -I"
+
+so () {
+eval "$@" | less -I~
+}
+
+### --------------------------------------------------------
+
+cv () {
+cdargs "$1" && cd "'cat "$HOME/.cdargs"'" ;
+
+} 
+### --------------------------------------------------------
+
+### history list
+
+export HISTCONTROL=erasedups
+hf () {
+clear
+if [ $# != 1 ]; then
+    echo 'Number of argumets to function "hf" must be exactly 1 [one]!'
+else
+    history | grep "$1"
+fi
+}
+
+### --------------------------------------------------------
+
+export EDITOR=/usr/bin/nano
+
+### --------------------------------------------------------
+
+eval "`dircolors -b ~/.dircolorsrc`"
+
+### --------------------------------------------------------
+
+
+export LESS="-QR"
+# export TERM=rxvt
+
+### --------------------------------------------------------
+
+sb () {
+source $HOME/.bashrc
+clear
+echo "*************************"
+echo "* Use the source Luke!! *"
+echo "*************************"
+echo "The \"$HOME/.bashrc\" has just been sourced!!"
+}
+
+### --------------------------------------------------------
+
+# export TMP=/tmp
+# export TEMP=/tmp
+
+### --------------------------------------------------------
+
+source $HOME/bin/cdargs-bash.sh
+
+### --------------------------------------------------------
+
+### USER SETTINGS COPIED FROM CYGWIN ###
+#########################################################################################
+
+aln () {
+clear
+eval "$@"
+echo -e "\n"
+}
+
+
+
