@@ -51,7 +51,7 @@ endif
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
-  set hlsearch
+  " set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -355,8 +355,10 @@ set cursorcolumn
 " hi CursorLine cterm=underline ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 " hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
-hi CursorLine cterm=underline ctermbg=53
-hi CursorColumn cterm=NONE ctermbg=24
+hi CursorLine cterm=NONE ctermfg=7 ctermbg=60
+
+" hi CursorColumn cterm=NONE ctermbg=24
+hi CursorColumn cterm=NONE ctermfg=7 ctermbg=60
 
 " 20190711
 " Enable syntax highlighting for python codes
@@ -378,3 +380,12 @@ let python_highlight_all = 1
 " simple-dark.vim
 " sonokai.vim
 " vanilla-cake.vim
+"
+"
+" added 20201120 after install of powerline plugins (look at metsys)
+set rtp+=/usr/local/lib/python3.8/site-packages/powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+set nohlsearch
+
+

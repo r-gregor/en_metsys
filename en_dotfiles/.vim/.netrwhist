@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/c/Users/gregor.redelonghi/BRISI/RROOTT'
+let g:netrw_dirhist_8='/c/Users/gregor.redelonghi/BRISI'
+let g:netrw_dirhist_7='/home/gregor.redelonghi/zacasno/MYTEST'
+let g:netrw_dirhist_6='/home/gregor.redelonghi/zacasno'
+let g:netrw_dirhist_5='/home/gregor.redelonghi/zacasno/MYTEST'
+let g:netrw_dirhist_4='/home/gregor.redelonghi/zacasno'
+let g:netrw_dirhist_3='/home/gregor.redelonghi/zacasno/MYTEST'
+let g:netrw_dirhist_2='/home/gregor.redelonghi/.vim'
+let g:netrw_dirhist_1='/home/gregor.redelonghi'
+let g:netrw_dirhist_0='/home'
