@@ -383,9 +383,11 @@ let python_highlight_all = 1
 "
 "
 " added 20201120 after install of powerline plugins (look at metsys)
-set rtp+=/usr/local/lib/python3.8/site-packages/powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/vim/
+" set rtp+=/usr/local/lib/python3.8/site-packages/powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/vim/
 set laststatus=2
 set t_Co=256
 set nohlsearch
+" 
 
+source /home/gregor.redelonghi/.vim/vim-status-1.vim
 
