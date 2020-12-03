@@ -389,5 +389,18 @@ set t_Co=256
 set nohlsearch
 " 
 
-source /home/gregor.redelonghi/.vim/vim-status-1.vim
+" status bar settup-01
+" added manually 2201203
+" source /home/gregor.redelonghi/.vim/vim-status-1.vim
+"
+
+" status bar settup-02
+" added from: https://github.com/itchyny/lightline.vim
+" git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+"
+"
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
 
