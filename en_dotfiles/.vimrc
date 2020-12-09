@@ -298,11 +298,6 @@ colorscheme simple-dark
 " colorscheme zenesque
 " colorscheme zmrok
 "
-ab sibang #! /bin/bash<cr><cr>### Name:<tab>Scriptname ...<cr>### Author:<tab>Author ... <cr>### Date:<tab>2013-05-24 <cr>### Decription:<cr>### <cr>### <cr>### <cr> 
-ab grv ${gr_} 
-
-ab ptn3 #! /usr/bin/env python3<cr># -*- coding: utf-8 -*-<cr><cr>
-
 
 " setup to show tabs indentations - added 20170116:
 " WORKS ONLY IF INDENTATIONS ARE TABS
@@ -320,7 +315,7 @@ ab ptn3 #! /usr/bin/env python3<cr># -*- coding: utf-8 -*-<cr><cr>
 " 20170504:
 " setup indentations to be 4 spaces, and TABs are 4 spaces also:
 " set expandtab 
-set shiftwidth=4
+" set shiftwidth=4
 set tabstop=4
 set smartindent
 
@@ -347,18 +342,20 @@ hi IndentGuidesEven ctermbg=238
 hi IndentGuidesOdd ctermbg=236
 " 20170504 ------------------------------------------------------------------------------------
 
-" 20180216 cursor "CROSSHAIR LOCATION"
-set cursorline
-set cursorcolumn
+"   " 20180216 cursor "CROSSHAIR LOCATION"
+"   set cursorline
+"   set cursorcolumn
+"   
+"   " ORIGINAL
+"   " hi CursorLine cterm=underline ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"   " hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"   
+"   hi CursorLine cterm=NONE ctermfg=7 ctermbg=60
+"   
+"   " hi CursorColumn cterm=NONE ctermbg=24
+"   hi CursorColumn cterm=NONE ctermfg=7 ctermbg=60
 
-" ORIGINAL
-" hi CursorLine cterm=underline ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
-hi CursorLine cterm=NONE ctermfg=7 ctermbg=60
-
-" hi CursorColumn cterm=NONE ctermbg=24
-hi CursorColumn cterm=NONE ctermfg=7 ctermbg=60
 
 " 20190711
 " Enable syntax highlighting for python codes
@@ -402,5 +399,16 @@ set nohlsearch
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+" ABBREVIATIONS
+ab sbng #! /usr/bin/env bash<cr><cr>### Name:<tab>Scriptname ...<cr>### Author:<tab>Author ... <cr>### Date:<tab> <cr>### Decription:<cr>### <cr>### <cr>### <cr> 
+ab grv ${gr_} 
+ab ptn3 #! /usr/bin/env python3<cr># -*- coding: utf-8 -*-<cr><cr>
+"inoremap ${ ${}<Left>
+inoremap ${ ${}<ESC>hli
+inoremap {  {}<ESC>hli
+inoremap (  ()<ESC>hli
+inoremap [  []<ESC>hli
+
 
 
