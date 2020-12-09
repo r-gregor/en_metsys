@@ -10,10 +10,10 @@ export PS1='$(printf "\n%s\n")\$> \u@cygwin-en [${PWD}]\n\$> '
 # external sources
 # ================
 
-source /home/forallusers/aliases_forall
-source /home/forallusers/funclist
-source /home/forallusers/bashrc_forall
-source /home/forallusers/startfuncs
+source $HOME/majstaf/forallusers/aliases_forall
+source $HOME/majstaf/forallusers/funclist
+source $HOME/majstaf/forallusers/bashrc_forall
+source $HOME/majstaf/forallusers/startfuncs
 
 # -------------------------------------------------------------------------------
 

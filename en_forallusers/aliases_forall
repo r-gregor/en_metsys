@@ -5,13 +5,15 @@ unalias -a
 
 alias ggo='source /home/gregor.redelonghi/majfajls/coding/gooo/gooo.sh'
 
-alias ls='\ls --group-directories-first --time-style=long-iso --color=always'
 alias lss='\ls --group-directories-first --time-style=long-iso'
+alias ls='lss --color=always'
 alias l1='ls -1F'
-alias ll='lss -F -gG --time-style=long-iso'
-alias llc='ll --color'
-alias lst='lss -t'
-alias la='ll -A'
+alias ll='ls -lgG'
+alias lls='lss -lgG'
+alias lst='ls -t'
+alias llt='ll -t'
+alias la='ls -A'
+alias lla='ll -A'
 alias lac='lss -AlF'
 alias lo='ls -gotrF'
 alias lld='ls -l --time-style=long-iso | grep ^d'
@@ -65,19 +67,12 @@ alias dboj='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_JAVA'
 alias dbog='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_GO' 
 
 # --------------------------------------------------------
-alias hstl="history > $HOME/seznami/history-en.dat_$(date +%Y%m%d-%H%M%S)"
+alias hstl="history > $HOME/majstaf/seznami/history-en.dat_$(date +%Y%m%d-%H%M%S)"
 
 alias ydlF='~/majfajls/coding/youtube-dl.exe -F '
 alias ydl="~/majfajls/coding/youtube-dl.exe -o '%(title)s_%(upload_date)s.%(ext)s'"
-
-### alias lynxd='lynx -dump -width=100 '
-alias lynxd='/home/gregor.redelonghi/majfajls/coding/lynxdump/lynxdump-webpage-to-file.sh '
 alias sov='set -o vi'
 alias usov='set -o emacs'
-# --------------------------------------------------------
-
-alias np='~/majfajls/coding/00_ukazi/np.sh'
-
 # --------------------------------------------------------
 alias llg='llc -gG'
 
@@ -192,7 +187,8 @@ alias tree='tree --charset ASCI --noreport'
 # VSCode-win32-x64-1.48.2
 # VSCode-win32-x64-1.49.0
 # VSC=VSCode-win32-x64-1.49.3
-VSC=VSCode-win32-x64-1.50.1
+# VSC=VSCode-win32-x64-1.50.1
+VSC=VSCode-win32-x64-1.51.1
 
 alias vscode="cygstart /c/Users/gregor.redelonghi/myprogs/${VSC}/Code.exe"
 alias code="vscode"
@@ -216,9 +212,13 @@ alias show00='find /usr/local/bin/ -type l | \grep "_" | xargs ls -l | \grep 00 
 
 # added 20200928
 # neded to update: python3 -m pip install ranger-fm
-alias r='ranger'
+# sorce! --> so it changes to curently selected directory on quit!!
+alias r='source ranger'
 alias dotfiles='/usr/bin/git --git-dir=/home/gregor.redelonghi/dotfiles_en --work-tree=/home/gregor.redelonghi'
 alias forallusers_en='/usr/bin/git --git-dir=/home/gregor.redelonghi/forallusers_en --work-tree=/home/forallusers'
 
 alias rclone='/usr/local/bin/rclone -v'
 
+
+alias ndot='/usr/bin/git --git-dir=/home/gregor.redelonghi/en_metsys_git_setup/en_metsys --work-tree=/home/gregor.redelonghi/en_metsys_git_setup/en_metsys_source'
+alias vimn='vim -Nu NORC '

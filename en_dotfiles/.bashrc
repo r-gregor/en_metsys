@@ -1,19 +1,32 @@
 # COMMAND PROMT SETTINGS
 # ======================
 
+# NON-COLOURED
+# export PS1='\u@cygwin-en \w \$> '
+
 ### changed 20160510
 # export PS1='$(printf "\n%s\n")\$> \u@cygwin-en [${PWD}]\n\$> '
-export PS1='$(printf "\n%s\n")\$> \[\033[01;32m\]\u@cygwin-en \[\033[01;34m\][${PWD}]\[\033[00m\] \n\$> '
+# export PS1='$(printf "%s\n")\$> \[\033[01;32m\]\u@cygwin-en \[\033[01;34m\][${PWD}]\[\033[00m\] \n\$> '
+
+# NEW BETTER (singleline) - 20201127:
+# COLOURED
+# export PS1='$(printf "%s")\[\033[01;33m\]\u\[\033[01;31m\]@\[\033[01;33m\]cygwin-en \[\033[01;36m\]\w\[\033[0m\] \$> '
+# export PS1='$(printf "%s")\[\e[01;33m\]\u\[\e[01;31m\]@\[\e[01;33m\]cygwin-en \[\e[01;36m\]\w\[\e[0m\] \$> '
+
+# new "NORD" color settings 20201203
+# 02 = dim --> 022 = end of dim
+# 38;5;[256 color code] = foreground
+# 48;5;[256 color code] = background
+# export PS1='$(printf "%s")\[\e[02;01;34m\]\u\[\e[022;01;34m\]@\[\e[02;01;34m\]cygwin-en \[\e[022;01;34m\]\w\[\e[0m\] \$> '
+export PS1='$(printf "%s")\[\e[02;01;38;5;75m\]\u\[\e[022;01;34m\]@\[\e[02;01;38;5;75m\]cygwin-en \[\e[022;01;34m\]\w\[\e[0m\] \$> '
 
 # -------------------------------------------------------------------------------
-
 # external sources
 # ================
-
-source /home/forallusers/aliases_forall
-source /home/forallusers/funclist
-source /home/forallusers/bashrc_forall
-source /home/forallusers/startfuncs
+source $HOME/majstaf/forallusers/aliases_forall
+source $HOME/majstaf/forallusers/funclist
+source $HOME/majstaf/forallusers/bashrc_forall
+source $HOME/majstaf/forallusers/startfuncs
 
 # -------------------------------------------------------------------------------
 
@@ -34,7 +47,6 @@ export LESS_TERMCAP_me=$(printf '\e[0m') # turn off all appearance modes (mb, md
 # export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # -------------------------------------------------------------------------------
-
 # eval "`dircolors -b $HOME/.dircolorsrc`"
 
 # export LC_ALL="C"
@@ -43,8 +55,7 @@ export LANG=en_US.utf8
 export DOMA="$HOME/RUT/home/rgregor"
 export rut="$HOME/RUT"
 
-# /home/gregor.redelonghi/majfajls/coding/todotoday.sh
-source $HOME/majfajls/coding/00_ukazi/centralna.conf
+source $HOME/majstaf/majconfig/centralna.conf
 
 ###  EN-proxy ...
 prx_ip=10.91.8.21
@@ -68,4 +79,11 @@ export GOPATH="C:\Users\gregor.redelonghi\myprogs\cygwin64\home\gregor.redelongh
 ### CHANGED 20200929
 export GOROOT='C:\Users\gregor.redelonghi\myprogs\go1.15.2.windows-amd64\go'
 
+
+# POWERLINE SETTINGS 20201125 -- no powerline font gliphs -- unable to instal powerline fonts (no admin rigths)
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
+# . /usr/local/lib/python3.8/site-packages/powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/bash/powerline.sh
+# 
 
