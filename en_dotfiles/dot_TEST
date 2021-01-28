@@ -1,0 +1,21 @@
+$> ndot add en_dotfiles/.vimrc 
+$> ndot commit -m "Updating changed .vimrc 20210122"
+$> ndot push
+$> ndot status
+$> ndot pull origin3 master
+$> ndot push origin3 master
+$> ndot status
+$> ndot pull
+$> ndot push
+$> ndot remote add en-gitlab-metsys git@gitlab.com:r-gregor/en_metsys.git
+
+ $> ndot remote -v
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (fetch)
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (push)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (fetch)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (push)
+origin  https://github.com/r-gregor/en_metsys (fetch)
+origin  https://github.com/r-gregor/en_metsys (push)
+origin3 https://gitlab.com/r-gregor/en_metsys.git (fetch)
+origin3 https://gitlab.com/r-gregor/en_metsys.git (push)
+
