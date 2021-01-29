@@ -1,30 +1,39 @@
-set nocp
+set nocompatible
 filetype plugin indent on 
 syntax on
 set backspace=indent,eol,start
 set hidden
 set noswapfile
 
-" let $RTP=split(&runtimepath, ',')[0]
-" let $RC="$HOME/.vim/vimrc"
-
 set number
 set relativenumber
 
-set laststatus=2
+" set laststatus=2
 set t_Co=256
 set nohlsearch
-
-
-" status bar settup-01
-" added manually 2201203
-" source /home/gregor.redelonghi/.vim/vim-status-1.vim
-"
 
 " status bar settup-02
 " added from: https://github.com/itchyny/lightline.vim
 " git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
-"
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ }
+
+set history=50						" keep 50 lines of command line history
+set ruler							" show the cursor position all the time
+set showcmd							" display incomplete commands
+set incsearch						" do incremental searching
+set shiftwidth=4
+set tabstop=4
+set smartindent
+set noexpandtab
+set softtabstop=4
+set laststatus=2
+set background=dark
+set ignorecase
+
+set listchars=tab:▸\  
+set list
+colorscheme simple-dark			" colorscheme rgregor256
+
