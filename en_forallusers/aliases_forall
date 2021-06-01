@@ -3,7 +3,7 @@
 
 unalias -a
 
-alias ggo='source /home/gregor.redelonghi/majfajls/coding/gooo/gooo.sh'
+alias ggo='source /home/gregor.redelonghi/majstaf/coding/gooo/gooo.sh'
 
 alias lss='\ls --group-directories-first --time-style=long-iso'
 alias ls='lss --color=always'
@@ -27,19 +27,19 @@ alias bcs='cat /home/gregor.redelonghi/docs/bash-shortcuts.chtsht'
 alias ddir='bash /home/gregor.redelonghi/docs/print-only-subdirectories.txt'
 alias hst='history'
 alias xx='logout'
-alias opnu='source /home/gregor.redelonghi/majfajls/coding/opn/opn.u.sh'
-alias opnw='source /home/gregor.redelonghi/majfajls/coding/opn/opn.w.sh'
+alias opnu='source /home/gregor.redelonghi/majstaf/majbin/opn/opnu'
+alias opnw='source /home/gregor.redelonghi/majstaf/majbin/opn/opnw'
 
 # --------------------------------------------------------
 
-alias godos='source $HOME/majfajls/coding/gooo/godossrc.sh'
+alias godos='source $HOME/majstaf/coding/gooo/godossrc.sh'
 
 # --------------------------------------------------------
 
 alias ydbak='yes | ddbak'
 alias ydlog='yes | ddlog'
 alias ydd='yes | ddbak && yes | ddlog'
-alias pozeni='source $HOME/majfajls/coding/00_ukazi/run-oneliner.sh'
+alias pozeni='source $HOME/majstaf/coding/00_ukazi/run-oneliner.sh'
 
 # --------------------------------------------------------
 
@@ -69,8 +69,8 @@ alias dbog='cd /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_GO'
 # --------------------------------------------------------
 alias hstl="history > $HOME/majstaf/seznami/history-en.dat_$(date +%Y%m%d-%H%M%S)"
 
-alias ydlF='~/majfajls/coding/youtube-dl.exe -F '
-alias ydl="~/majfajls/coding/youtube-dl.exe -o '%(title)s_%(upload_date)s.%(ext)s'"
+alias ydlF='~/majstaf/majprogs/youtube-dl.exe -F '
+alias ydl="~/majstaf/majprogs/youtube-dl.exe -o '%(title)s_%(upload_date)s.%(ext)s'"
 alias sov='set -o vi'
 alias usov='set -o emacs'
 # --------------------------------------------------------
@@ -89,8 +89,8 @@ alias showifs='printf %q "$IFS"'
 # go to /c/Users/gregor.redelonghi ...
 alias cdg='export CDG=/c/Users/gregor.redelonghi; cd $CDG'
 alias cdf='export CDF=/home/forallusers; cd $CDF'
-alias cdr="source ~/majfajls/coding/cdr.sh"
-alias kateof='cat <<EOF | ~/majfajls/coding/send_mail/snd.mm.hm.sh'
+alias cdr="source ~/majstaf/coding/cdr.sh"
+alias kateof='cat <<EOF | ~/majstaf/coding/send_mail/snd.mm.hm.sh'
 
 # added simple AAA comand to start zze:
 alias aaa='zze'
@@ -105,21 +105,21 @@ alias sl2='screen -X source ~/.screen-lyt-2' # 1-st V-split, right region H-spli
 alias sl3='screen -X source ~/.screen-lyt-3' # 2x V-split, 2x H-split
 
 # added 20160819 ---------------------------------------------------------------
-# yes to sndhm --> lns from $HOME/majfajls/coding/sndhm.sh
+# yes to sndhm --> lns from $HOME/majstaf/coding/sndhm.sh
 alias sndhmy='yes | sndhm'
 
 # ------------------------------------------------------------------------------
 #
-alias w3md='/home/gregor.redelonghi/majfajls/coding/w3mdump/w3mdump_webpage_to_file.sh '
+alias w3md='/home/gregor.redelonghi/majstaf/majbin/w3mdump/w3mdump-webpage-to-file'
 
 # added 20161110 ---------------------------------------------------------------
 alias w3m_d='w3m -dump -cols 110'
 alias lynx_d='lynx -dump -width=110'
 
 # added 20161116 -- new python3 default --> some scripts to be called from python2:
-alias sndm-enpy='python2 ~/majfajls/coding/send_mail/sendmymail-en.py'
+alias sndm-enpy='python2 ~/majstaf/coding/send_mail/sendmymail-en.py'
 
-alias colors='bash ~/majfajls/coding/colors_show_onl.sh'
+alias colors='bash ~/majstaf/coding/colors_show_onl.sh'
 alias grpytn='grep -A10 http /c/Users/gregor.redelonghi/drpbx-en/ODPRTO/_PYTHON/python_yourownlinux-com_python-tutorials-multyf_2016*.txt'
 
 alias p3='/usr/bin/python3'
@@ -129,7 +129,7 @@ alias YQB='yes | METSYS/QRSYNC_BACKUP'
 
 # added 20171024
 # vim seznam.pnp --> create dir structure in 2017 folder
-alias vszn='vim ~/majfajls/coding/pnp/seznam.pnp'
+alias vszn='vim ~/majstaf/coding/pnp/seznam.pnp'
 
 alias ggl='cygstart /c/Users/gregor.redelonghi/AppData/Local/Google/Chrome/Application/chrome.exe'
 
@@ -168,12 +168,12 @@ alias ptnhttp='python3 -m http.server 8080'
 alias sortl1='ls -ltF --time-style="+%Y%m%d %H-%M-%S" | cut -b 51- | sort -n'
 
 # added 20190705
-MFS="/home/gregor.redelonghi/majfajls/coding"
+MFS="/home/gregor.redelonghi/majstaf/coding"
 alias mfcj='cd $MFS/JAVA_en'
 alias mfcp='cd $MFS/PYTHON_en'
 
 # added 20191014
-alias tree='tree --charset ASCI --noreport'
+alias tree='tree --charset ASCII --noreport'
 
 
 # VSCode start
@@ -188,10 +188,17 @@ alias tree='tree --charset ASCI --noreport'
 # VSCode-win32-x64-1.49.0
 # VSC=VSCode-win32-x64-1.49.3
 # VSC=VSCode-win32-x64-1.50.1
-VSC=VSCode-win32-x64-1.51.1
+# VSC=VSCode-win32-x64-1.51.1
+# VSCode-win32-x64-1.54.3
+VSC1=VSCode-win32-x64-1.55.2
+VSC2=VSCode-win32-x64-1.56.2
+alias vscode1="cygstart /c/Users/gregor.redelonghi/myprogs/${VSC1}/Code.exe"
+alias vscode2="cygstart /c/Users/gregor.redelonghi/myprogs/${VSC2}/Code.exe"
+alias code1="vscode1"
+alias code2="vscode2"
 
-alias vscode="cygstart /c/Users/gregor.redelonghi/myprogs/${VSC}/Code.exe"
-alias code="vscode"
+alias intelij="cygstart /c/Users/gregor.redelonghi/myprogs/ideaIC-2021.1.1.win/bin/idea64.exe"
+alias Idea="cygstart /c/Users/gregor.redelonghi/myprogs/ideaIC-2021.1.1.win/bin/idea64.exe"
 
 # node.js start
 NODE=node-v12.18.3-win-x64
@@ -222,3 +229,4 @@ alias rclone='/usr/local/bin/rclone -v'
 
 alias ndot='/usr/bin/git --git-dir=/home/gregor.redelonghi/en_metsys_git_setup/en_metsys --work-tree=/home/gregor.redelonghi/en_metsys_git_setup/en_metsys_source'
 alias vimn='vim -Nu NORC '
+alias py='/usr/bin/python3'

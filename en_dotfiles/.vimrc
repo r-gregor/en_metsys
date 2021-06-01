@@ -18,6 +18,9 @@ set background=dark
 set number
 set relativenumber
 set ignorecase
+set nowrap
+set wildmenu
+set wildmode=list:longest,full
 
 " ------------ MOUSE DISPLAY SETTING --------------------------
 " In many terminal emulators the mouse works just fine, thus enable it.
@@ -113,4 +116,12 @@ nnoremap <C-n> :call NumberToggle()<CR>
 " colorscheme  simple-dark
 colorscheme  wombat256mod
 " colorscheme nord
+
+" ADDED 20210226
+" search for [12] or [123] troughout a file 
+" and ask to deete it --> maped to ,d <comma+d> 
+nnoremap ,d :%s/\[\d\+]//gc
+nnoremap ,c i<code><CR><CR></code><CR><ESC>kki
+
+" 
 
