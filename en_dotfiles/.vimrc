@@ -121,7 +121,17 @@ colorscheme  wombat256mod
 " search for [12] or [123] troughout a file 
 " and ask to deete it --> maped to ,d <comma+d> 
 nnoremap ,d :%s/\[\d\+]//gc
-nnoremap ,c i<code><CR><CR></code><CR><ESC>kki
-
+nnoremap ,c i<code><CR></code><CR><ESC>kki
+" 
+"
+" added 20210622 (MY PRECIOUS!!)
+" comment/uncomment visually selected block
+vnoremap ,pt :s@^@# @<CR>
+vnoremap ,jv :s@^@// @<CR>
+vnoremap ,<space> :s@^.\{1,2\} @@<CR>
+" 
+" html comment/uncomment
+vnoremap ,ht :s/\%V\(.*\)\%V/<!-- \1 -->/<CR>
+vnoremap ,hu :s/\%V<!-- \(.*\) -->\%V/\1/<CR>
 " 
 
