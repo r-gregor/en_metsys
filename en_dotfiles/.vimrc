@@ -135,3 +135,8 @@ vnoremap ,ht :s/\%V\(.*\)\%V/<!-- \1 -->/<CR>
 vnoremap ,hu :s/\%V<!-- \(.*\) -->\%V/\1/<CR>
 " 
 
+" added 20210629 (d) - enclose visual selection
+" between <code></code> tags
+vnoremap ,cc di<code><CR></code><CR><ESC>kP?<code><CR>:s@.*\(<code>\)@\1@<CR>/</code><CR>:s@.*\(</code>\)@\1@<CR>j
+
+
